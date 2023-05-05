@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+  @import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Anton&family=Archivo+Black&family=Coda+Caption:wght@800&family=DM+Serif+Text:ital@1&family=Dancing+Script:wght@400;500;600;700&family=Indie+Flower&family=Inspiration&family=Kalam:wght@300&family=Lobster&family=Mynerve&family=Nunito:ital,wght@1,200&family=Oswald:wght@700&family=Overpass:ital,wght@1,700&family=Pacifico&family=Permanent+Marker&family=Raleway:ital,wght@0,100;0,200;1,100&family=Roboto+Condensed:wght@700&family=Roboto+Mono:ital,wght@0,700;1,300&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,100;1,300;1,500;1,900&family=Rubik+Bubbles&family=Russo+One&family=Secular+One&family=Shantell+Sans:wght@300&family=Tilt+Warp&family=Yellowtail&family=Yeon+Sung&display=swap');
+
+body{
+    font-family: 'Poppins',sans-serif;
+}

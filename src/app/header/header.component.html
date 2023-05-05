@@ -1,0 +1,36 @@
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container px-4 px-lg-5  align-items-center">
+        <a class="navbar-brand" routerLink="">
+            <i class="fa-solid fa-cart-arrow-down fa-2x" style="color: #ffffff;"></i> E-Cart
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item">
+                    <input (keyup)="search($event)" type="text" style="width: 400px;" class="form-control" placeholder="Search products here!" >
+                </li>
+                &nbsp;
+                <li>
+                    <button type="button" class="btn btn-light"><i class="fa-solid fa-magnifying-glass" style="color: #6e8fe9;"></i></button>
+
+                </li>
+                
+            </ul>
+            <form class="d-flex align-items-center">
+                <!-- wishlist -->
+                <a routerLink="products/wish-list" class="btn text-light" >
+                    <i class="fa-solid fa-heart text-danger fa-beat"></i>
+                    WishList
+                    
+                </a>
+                <!-- cart -->
+                <a class="btn text-white" routerLink="products/cart">
+                    <i class="fa-solid fa-cart-plus fa-beat"></i>
+                    Cart
+                    <span class="badge bg-white text-dark">{{cartItems}}</span>
+                </a>
+            </form>
+        </div>
+    </div>
+</nav>

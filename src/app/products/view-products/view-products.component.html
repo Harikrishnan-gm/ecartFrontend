@@ -1,0 +1,29 @@
+<!-- Product section-->
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0 w-50" [src]="product.image" alt="..." /></div>
+            <div  class="col-md-6">
+                <div class="small mb-1">{{product.category}}</div>
+                <h1 class="display-5 fw-bolder">{{product.title}}</h1>
+                <div class="fs-5 mb-5">
+                    <span class="text-decoration-line-through">{{product.price}}-5</span>
+                    <span>₹{{product.price}}</span>
+                </div>
+                <p class="lead">{{product.description}}</p>
+                <h5><i class="fa-regular fa-star" style="color: #857a04;"></i>{{product.rating.rate}} (<i class="fa-solid fa-user" style="color: #0c4dcf;"></i>{{product.rating.count}})</h5>
+                <div class="d-flex justify-content-evenly">
+                    <!-- <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" /> -->
+                    <button (click)="addtowishList()" class="btn  btn-outline-warning  flex-shrink-0" type="button">
+                        <i class="fa-solid fa-heart-circle-plus" style="color: #a20109;"></i>
+                       Add to wishList
+                    </button>
+                    <button (click)="addtoCart(product)" class="btn btn-outline-success flex-shrink-0" type="button">
+                        <i class="fa-solid fa-cart-plus "></i>
+                        Add to cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

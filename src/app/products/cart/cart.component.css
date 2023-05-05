@@ -1,0 +1,9 @@
+.icon{
+    cursor: pointer;
+}
+.container{
+    padding-top: 10%;
+}
+row{
+    box-shadow: inset 5em 1em gold;
+}

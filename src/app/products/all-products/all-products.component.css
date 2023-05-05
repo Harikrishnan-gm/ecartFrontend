@@ -1,0 +1,12 @@
+.banner{
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20210609/pngtree-3d-render-online-shopping-with-mobile-and-bag-image_727266.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+.card img{
+    transition: 2s;
+}
+.card:hover img{
+    transform: scale(1.1);
+    transition: 2s;
+}

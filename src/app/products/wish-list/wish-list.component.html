@@ -1,0 +1,58 @@
+<!-- empty wishlist -->
+<div *ngIf="wProducts.length==0" class="container">
+    <div class="row ">
+        <div class="col text-center mt-5" >
+            <img src="https://i.pinimg.com/originals/f6/e4/64/f6e464230662e7fa4c6a4afb92631aed.png" alt=""> <br>
+            <a class="btn btn-success" routerLink="">Add More</a>
+        </div>
+    </div>
+</div>
+<section class="py-5">
+    <div *ngIf="wProducts.length!=0" class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div *ngFor="let Product of wProducts" class="col mb-5">
+                <div class="card h-100 p-3">
+                    <!-- Product image-->
+                    <img style="height: 10rem;width: 10rem;" class="card-img-top p-2" [src]="Product.image" alt="Product.image" />
+                    <!-- Product details-->
+                    <!-- Product name-->
+                    <!-- <h5 class="fw-bolder collapse" id="collapseExample">
+
+                        {{Product.title.slice(0,15)}}</h5> -->
+                        <h5 for="">{{Product.title.slice(0,15)}}</h5>
+                        <h5 class="collapse" id="collapseExample">
+                            {{Product.title.slice(15)}}
+                          </h5>
+                        <label (click)="Collapse()"  class="text-danger" data-bs-toggle="collapse" data-bs-target="#collapseExample">Read
+                            <span *ngIf="isCollapse">More</span>
+                            <span *ngIf="!isCollapse" >less</span>
+            
+                            </label>
+
+
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            
+                            <!-- Product price-->
+                            ₹ {{Product.price}}
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="d-flex justify-content-evenly">
+                            <!-- remove from wishlist -->
+                            <button (click)="removeItem(Product.id)" class="btn btn-danger " >
+                                <i class="fa-solid fa-heart-circle-minus" style="color: #acb7b9;"></i>
+                            </button>
+                            <!-- add to cart -->
+                            <button (click)="addtoCart(Product)" class="btn btn-success " >
+                                <i class="fa-solid fa-cart-plus text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</section>
